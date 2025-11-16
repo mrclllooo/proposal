@@ -1,0 +1,246 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #ffe6f7, #fff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+#flower-screen {
+    text-align: center;
+    animation: fadeIn 2s;
+}
+
+#flower-screen h1 {
+    color: #d63384;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.emoji-flowers {
+    font-size: 4em;
+    text-align: center;
+    margin: 20px 0;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+}
+
+.flower {
+    width: 100px;
+    height: 120px;
+    margin: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rose::before {
+    content: '';
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, #ff007f, #cc0055);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    box-shadow: 0 0 10px rgba(255, 0, 127, 0.5);
+}
+
+.rose::after {
+    content: '';
+    width: 20px;
+    height: 80px;
+    background: linear-gradient(to top, #228b22, #32cd32);
+    position: absolute;
+    bottom: 0;
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
+}
+
+.rose {
+    position: relative;
+}
+
+.rose .petal1, .rose .petal2, .rose .petal3, .rose .petal4, .rose .petal5 {
+    position: absolute;
+    width: 20px;
+    height: 40px;
+    background: linear-gradient(45deg, #ff007f, #ff69b4);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    top: 10px;
+    left: 20px;
+    transform-origin: bottom center;
+}
+
+.rose .petal1 { transform: rotate(0deg); }
+.rose .petal2 { transform: rotate(72deg); }
+.rose .petal3 { transform: rotate(144deg); }
+.rose .petal4 { transform: rotate(216deg); }
+.rose .petal5 { transform: rotate(288deg); }
+
+.tulip::before {
+    content: '';
+    width: 50px;
+    height: 70px;
+    background: linear-gradient(45deg, #ff69b4, #ff1493);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    position: absolute;
+    top: 0;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+}
+
+.tulip::after {
+    content: '';
+    width: 15px;
+    height: 70px;
+    background: linear-gradient(to top, #228b22, #32cd32);
+    position: absolute;
+    bottom: 0;
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
+}
+
+.tulip {
+    position: relative;
+}
+
+.tulip .petal1, .tulip .petal2, .tulip .petal3 {
+    position: absolute;
+    width: 25px;
+    height: 35px;
+    background: linear-gradient(45deg, #ff69b4, #ff1493);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    top: 5px;
+    left: 12px;
+    transform-origin: bottom center;
+}
+
+.tulip .petal1 { transform: rotate(-30deg); }
+.tulip .petal2 { transform: rotate(0deg); }
+.tulip .petal3 { transform: rotate(30deg); }
+
+.sunflower::before {
+    content: '';
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, #ffd700, #ffb347);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.sunflower::after {
+    content: '';
+    width: 18px;
+    height: 75px;
+    background: linear-gradient(to top, #228b22, #32cd32);
+    position: absolute;
+    bottom: 0;
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
+}
+
+.sunflower {
+    position: relative;
+}
+
+.sunflower .petal1, .sunflower .petal2, .sunflower .petal3, .sunflower .petal4, .sunflower .petal5, .sunflower .petal6, .sunflower .petal7, .sunflower .petal8 {
+    position: absolute;
+    width: 15px;
+    height: 35px;
+    background: linear-gradient(45deg, #ffd700, #ffb347);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    top: 12px;
+    left: 22px;
+    transform-origin: bottom center;
+}
+
+.sunflower .petal1 { transform: rotate(0deg); }
+.sunflower .petal2 { transform: rotate(45deg); }
+.sunflower .petal3 { transform: rotate(90deg); }
+.sunflower .petal4 { transform: rotate(135deg); }
+.sunflower .petal5 { transform: rotate(180deg); }
+.sunflower .petal6 { transform: rotate(225deg); }
+.sunflower .petal7 { transform: rotate(270deg); }
+.sunflower .petal8 { transform: rotate(315deg); }
+
+#next-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #d63384;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background 0.3s;
+}
+
+#next-btn:hover {
+    background: #b02a6a;
+}
+
+#message-screen {
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 2s;
+    background: linear-gradient(135deg, #ffb6c1, #ff69b4, #ff1493);
+    position: relative;
+    overflow: hidden;
+}
+
+#message-screen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="5" fill="%23ff69b4"/><circle cx="80" cy="30" r="4" fill="%23ffb6c1"/><circle cx="50" cy="80" r="6" fill="%23ff1493"/><circle cx="10" cy="70" r="3" fill="%23ff69b4"/><circle cx="90" cy="60" r="5" fill="%23ffb6c1"/></svg>');
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.message-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 20px auto;
+    position: relative;
+    z-index: 1;
+}
+
+.special-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 15px;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 3px solid #ff69b4;
+}
+
+.message-container p {
+    font-size: 1.3em;
+    line-height: 1.8;
+    color: #333;
+    margin: 10px 0;
+    font-family: 'Georgia', serif;
+}
+
+.pink-text {
+    color: #ff1493;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
